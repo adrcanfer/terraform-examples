@@ -10,10 +10,7 @@ terraform {
 
 provider "aws" {
   profile = "Adri"
-}
-
-provider "aws" {
-  profile = "Adri"
-  region = "eu-west-1"
-  alias = "ireland"
+  default_tags {
+    tags = var.tags
+  }
 }
